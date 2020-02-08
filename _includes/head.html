@@ -39,4 +39,5 @@
   <![endif]-->
   {% if touch_icon !="" %}<link rel="apple-touch-icon-precomposed" href="{{ touch_icon | relative_url }}">{% endif %}
   {% if favicon !="" %}<link rel="icon" href="{{ favicon | relative_url }}">{% endif %}
+  {% include services/google-analytics.html %}
 </head>

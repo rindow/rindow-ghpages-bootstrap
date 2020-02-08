@@ -13,8 +13,8 @@ It can be used if you put out a widget to the outside of the comment.
 
 {% include widgets/highlightbox.html %}
 {% include widgets/highlight.html %}
-{% include widgets/postlist.html %}
-{% include widgets/docindex.html %}
+{% include widgets/post-list.html %}
+{% include widgets/doc-list.html %}
 
 {% endcomment %}
 

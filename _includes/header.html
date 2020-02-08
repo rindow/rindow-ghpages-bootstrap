@@ -1,3 +1,4 @@
+{% capture header_style %}{% include get-theme-value name="header_style" %}{% endcapture %}
 {% if page.collection %}
   {% comment %} Collection can not inherit page property. {% endcomment %}
   {% include set-current-collection %}{% assign header = globalcurrentcollection %}
@@ -7,8 +8,9 @@
   {% assign header = page %}
 {% endif %}
 {% if header.header != "disable" %}
-<div role="banner" class="jumbotron">
-  <div class="container">
+
+<div role="banner" class="jumbotron{% if header_style == "fluid" %} jumbotron-fluid{% endif %}">
+  {% if header_style == "fluid" %}<div class="container">{% endif %}
   {% if header.title %}
     <h1 class="{% include get-theme-value name="header_title_class" %}">{{ header.title }}</h1>
     <p class="{% include get-theme-value name="header_description_class" %}">{{ header.description }}</p>
@@ -16,6 +18,6 @@
     <h1 class="{% include get-theme-value name="header_title_class" %}">{{ site.title }}</h1>
     <p class="{% include get-theme-value name="header_description_class" %}">{{ site.description }}</p>
   {% endif %}
-  </div>
+  {% if header_style == "fluid" %}</div>{% endif %}
 </div>
 {% endif %}

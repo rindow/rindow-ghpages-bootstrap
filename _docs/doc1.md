@@ -9,7 +9,7 @@ doc
 
 link to [doc3 1](doc3.html#doc3-2)
 
-[![Slide1](/img/thumb/FirstSlide.png)](/img/FirstSlide.png)
+[![Slide1](/assets/img/thumb/FirstSlide.png)](/assets/img/FirstSlide.png)
 
 |fruit |quantity|
 |------|--------|

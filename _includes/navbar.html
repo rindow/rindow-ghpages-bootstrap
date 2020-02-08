@@ -4,43 +4,35 @@
 {% capture navbar_search_box %}{% include get-theme-value name="navbar_search_box" %}{% endcapture %}
 {% capture navbar_style %}{% include get-theme-value name="navbar_style" %}{% endcapture %}
 <nav class="navbar{% if navbar_style != "" %} {{ navbar_style }}{% endif %}" role="navigation">
-  <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
       {% if navbar_brand_image != "" %}<a href="{{ '/' | relative_url }}"><img src="{{ navbar_brand_image | relative_url }}" class="brand-image" alt="brand"></a>{% endif %}<a class="navbar-brand" href="{{ '/' | relative_url }}">{% if navbar_brand_icon != "" %}<span class="glyphicon {{ navbar_brand_icon }}"></span>{% endif %}{% if navbar_brand_caption != "" %}{{ navbar_brand_caption }}{% endif %}</a>
     </div>
-    <div class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
+    <div class="navbar-collapse collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
       {% for nav in site.navbar.menu %}
         {% if nav.menu %}
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ nav.caption }}<b class="caret"></b></a>
-            <ul class="dropdown-menu">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ nav.caption }}</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             {% for menu_item in nav.menu %}
               {% if menu_item.separator %}
-                <li class="{{ menu_item.separator }}">{{ menu_item.caption }}</li>
+                <div class="{{ menu_item.separator }}"></div>
               {% else %}
-                <li><a href="{{ menu_item.link | relative_url }}">{{ menu_item.caption }}</a></li>
+                <a class="dropdown-item" href="{{ menu_item.link | relative_url }}">{{ menu_item.caption }}</a>
               {% endif %}
             {% endfor %}
-            </ul>
+            </div>
           </li>
         {% else %}
-          <li{% if page.url contains nav.link %} class="active"{% endif %}><a href="{{ nav.link | relative_url }}">{{ nav.caption }}</a></li>
+          <li class="nav-item{% if page.url contains nav.link %} active{% endif %}"><a class="nav-link" href="{{ nav.link | relative_url }}">{{ nav.caption }}</a></li>
         {% endif %}
       {% endfor %}
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-        {% if navbar_search_box != "" %}<form class="navbar-form navbar-left" action="https://www.google.com/search" method="get" role="form" onSubmit="return sitesearchauxi(this.elements[0].elements[0]);">
-          <fieldset role="search">
-            <input class="form-control" type="search" name="q" results="0" placeholder="Search"/>
-          </fieldset>
-        </form>{% endif %}
-      </ul>
+      {% if navbar_search_box != "" %}<form class="form-inline my-2 my-lg-0" action="https://www.google.com/search" method="get" role="form" onSubmit="return sitesearchauxi(this.elements[0]);">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      </form>{% endif %}
     </div><!--/.nav-collapse -->
-  </div><!-- /.container -->
 </nav>

@@ -1,14 +1,14 @@
 # coding: utf-8
 
 Gem::Specification.new do |spec|
-  spec.name          = "githubpages-bootstrap"
-  spec.version       = "0.1.0"
+  spec.name          = "rindow-ghpages-bootstrap"
+  spec.version       = "0.2.0"
   spec.authors       = ["Yuichi Ishikawa"]
   spec.email         = ["yuichiis.pub@gmail.com"]
 
   spec.summary       = %q{A beautiful, githubpages theme for Jekyll.}
-  spec.homepage      = "https://github.com/yuichiis/githubpages-bootstrap"
-  spec.license       = "MIT"
+  spec.homepage      = "https://github.com/rindow/rindow-ghpages-bootstrap"
+  spec.license       = "BSD 3-Clause"
 
   spec.metadata["plugin_type"] = "theme"
 

@@ -1,12 +1,12 @@
-GitHub Pages Bootstrap
-======================
+Rindow GitHub Pages with Bootstrap
+==================================
 
 This is a website template for the Automatic page generator on the GitHub Pages.
 
 ## You can make a website quickly.
 
 - Download this.
-- Edit just 2 files. 
+- Edit just 2 files.
   - index.md
   - _config.yml
 - Create new repository for GitHub Pages on the Github.

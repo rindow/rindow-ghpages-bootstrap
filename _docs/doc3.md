@@ -3,6 +3,7 @@ layout: document
 title: "doc 3"
 previous_section: doc2-2
 upper_section: index
+lang: ja
 ---
 doc
 

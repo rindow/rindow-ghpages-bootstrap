@@ -1,14 +1,17 @@
 ---
 layout: frame
 ---
+{% capture header_style %}{% include get-theme-value name="header_style" %}{% endcapture %}
 {% capture navbar_layout %}{% include get-theme-value name="navbar_layout" %}{% endcapture %}
 {% capture sidearea_layout %}{% include get-theme-value name="sidearea_layout" %}{% endcapture %}
-{% capture header_style %}{% include get-theme-value name="header_style" %}{% endcapture %}
-{% if header_style == "fit" %}<div class="container">{% endif %}
+<header>
+{% if header_style != "fluid" %}<div class="container">{% endif %}
 {% if navbar_layout == "top" %}{% include navbar.html %}{% endif %}
 {% include header.html %}
 {% if navbar_layout == "middle" %}{% include navbar.html %}{% endif %}
-{% if header_style != "fit" %}<div class="container">{% endif %}
+{% if header_style != "fluid" %}</div>{% endif %}
+</header>
+<div class="container">
   <div class="main-container">
     <div class="row">
       <div class="col-sm-12">
@@ -31,28 +34,28 @@ layout: frame
         </section>
       </div>
     {% when "left" %}
-      <div class="col-sm-9 col-sm-push-3">
+      <div class="col-sm-9 order-sm-last">
         <section id="main">
         {{ content }}
         </section>
       </div>
-      <div class="col-sm-3 col-sm-pull-9">
+      <div class="col-sm-3 order-sm-first">
         <section id="side">
         {% include sidearea.html name="primary" %}
         </section>
       </div>
     {% when "both" %}
-      <div class="col-sm-6 col-sm-push-3">
+      <div class="col-sm-6">
         <section id="main">
         {{ content }}
         </section>
       </div>
-      <div class="col-sm-3 col-sm-pull-6">
+      <div class="col-sm-3 order-sm-first">
         <section id="side">
         {% include sidearea.html name="primary" %}
         </section>
       </div>
-      <div class="col-sm-3">
+      <div class="col-sm-3 order-sm-last">
         <section id="side2">
         {% include sidearea.html name="secondary" %}
         </section>
@@ -67,7 +70,6 @@ layout: frame
     </div>
   </div>
   {% include footer.html %}
-{% if header_style != "fit" %}</div><!-- /.container -->{% endif %}
 {% if navbar_layout == "bottom" %}{% include navbar.html %}{% endif %}
-{% if header_style == "fit" %}</div><!-- /.container -->{% endif %}
+</div>
 {% include sidearea.html name="floating" %}
