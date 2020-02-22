@@ -26,7 +26,7 @@ navbar_layout: top # top or middle or bottom or none
 navbar_search_box: true
 sidearea_layout: left # right or left or both or none
 table_style: table-striped
-doc_navigator: none # top or bottom or both or none
+doc_navigator: bottom # top or bottom or both or none
 doc_breadcrumb: enable
 #script_top: ! '
 #'
