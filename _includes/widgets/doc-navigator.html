@@ -2,6 +2,14 @@
 {% capture doc_breadcrumb %}{% include get-theme-value name="doc_breadcrumb" %}{% endcapture %}
 {% include set-current-collection %}{% assign collection = globalcurrentcollection %}
 {% if collection == null or collection.navigator != "disable" %}
+{% assign previous_title = "" %}
+{% assign previous_id = "" %}
+{% assign next_title = "" %}
+{% assign next_id = "" %}
+{% assign upper_title = "" %}
+{% assign upper_id = "" %}
+{% assign grand_upper_title = "" %}
+{% assign grand_upper_id = "" %}
 {% if include.enable_title %}
   {% for doc in collection.docs %}
     {% assign section = doc.id | split:"/" | last %}
@@ -58,8 +66,8 @@
 {% if include.enable_title == "bottom" and doc_navigator != "" and doc_navigator != "none" %}
 <nav>
   <div class="row">
-    <div class="col-6 text-sm-left">{{ previous_title }}</div>
-    <div class="col-6 text-sm-right">{{ next_title }}</div>
+    {% if previous_title %}<div class="col-6 text-sm-left">{{ previous_title }}</div>{% endif %}
+    {% if previous_title %}<div class="col-6 text-sm-right">{{ next_title }}</div>{% endif %}
   </div>
 </nav>
 {% endif %}

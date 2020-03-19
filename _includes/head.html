@@ -8,6 +8,7 @@
 {% capture touch_icon %}{% include get-theme-value name="touch_icon" %}{% endcapture %}
 {% if page.collection %}{% include set-current-collection %}{% assign header = globalcurrentcollection %}
 {% elsif page.type == "blog" %}{% assign header = site.blog %}
+{% else %}{% assign header = "" %}
 {% endif %}
 {% if page.title %}{% assign title = page.title %}{% endif %}
 {% if header.title %}{% capture title %}{{ title }}{% if title %} : {% endif %}{{ header.title }}{% endcapture %}{% endif %}

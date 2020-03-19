@@ -2,6 +2,7 @@ frameworkcss: https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.m
 #frameworkcsstheme:
 frameworkscript: https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js
 jqueryscript: https://code.jquery.com/jquery-3.4.1.slim.min.js
+mathscript: http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 css: /assets/themes/default/css/style.css
 favicon: /assets/themes/default/img/favicon.ico
 touch_icon: /assets/themes/default/img/apple-touch-icon-precomposed.png
@@ -19,6 +20,7 @@ header_description_class: "header-description"
 #navbar_brand_icon: glyphicon-home
 navbar_brand_caption: "Site Title"
 #navbar_brand_image: /assets/themes/default/img/apple-touch-icon-precomposed.png
+#navbar_brand_image_alt: brand
 #navbar_layout: top
 navbar_style: navbar-expand-lg navbar-light bg-light
 navbar_layout: top # top or middle or bottom or none

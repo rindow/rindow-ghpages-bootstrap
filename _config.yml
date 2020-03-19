@@ -80,22 +80,9 @@ collections:
     title: "Documents"
     description: "some description"
     output: true
+    #theme: docs
     comment: true
     share: true
-    #lang: en
-    #navigator: disable
-    #sidearea:
-    #  primary:
-    #    widgets:
-    #    - { widget: search, caption: "Search" }
-    #    - { widget: free-area, name: menu, markdownify: true, realm: docs }
-  moderndoc:
-    title: "Modern"
-    description: "some description"
-    output: true
-    theme: modern
-    #comment: true
-    #share: true
     #lang: en
     #navigator: disable
     sidearea:
@@ -103,6 +90,7 @@ collections:
         widgets:
         - { widget: search, caption: "Search" }
         - { widget: free-area, name: menu, markdownify: true, realm: docs }
+        - { widget: nav, name: toc, realm: docs, caption: "Contents" }
   help:
     title: "Help"
     output: true
