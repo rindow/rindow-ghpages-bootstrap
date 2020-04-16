@@ -73,6 +73,11 @@ navbar:
     - { caption: "Sitemap", link: "/sitemap/" }
     - { caption: "About", link: "/about/" }
 
+footer:
+  links:
+    - { caption: "About", link: "/about/" }
+    - { caption: "Sitemap", link: "/sitemap/" }
+
 ### Document collections
 collections:
   docs:
