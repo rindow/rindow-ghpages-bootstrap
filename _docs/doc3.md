@@ -1,7 +1,7 @@
 ---
 layout: document
 title: "doc 3"
-previous_section: doc2-2
+previous_section: doc2/doc2-1
 upper_section: index
 lang: ja
 ---

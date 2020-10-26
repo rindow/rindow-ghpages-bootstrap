@@ -69,7 +69,9 @@ layout: frame
     {% endcase %}
     </div>
   </div>
-  {% include footer.html %}
-{% if navbar_layout == "bottom" %}{% include navbar.html %}{% endif %}
 </div>
+{% if header_style != "fluid" %}<div class="container">{% endif %}
+{% include footer.html %}
+{% if navbar_layout == "bottom" %}{% include navbar.html %}{% endif %}
+{% if header_style != "fluid" %}</div>{% endif %}
 {% include sidearea.html name="floating" %}

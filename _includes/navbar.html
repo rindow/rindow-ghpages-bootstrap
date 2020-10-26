@@ -4,7 +4,7 @@
 {% capture navbar_search_box %}{% include get-theme-value name="navbar_search_box" %}{% endcapture %}
 {% capture navbar_style %}{% include get-theme-value name="navbar_style" %}{% endcapture %}
 <nav class="navbar{% if navbar_style != "" %} {{ navbar_style }}{% endif %}" role="navigation">
-    {% if navbar_brand_image != "" %}<a href="{{ '/' | relative_url }}"><img src="{{ navbar_brand_image | relative_url }}" class="brand-image navbar-brand" alt="{{ navbar_brand_image_alt }}"></a>{% endif %}<a class="navbar-brand" href="{{ '/' | relative_url }}">{% if navbar_brand_icon != "" %}<span class="glyphicon {{ navbar_brand_icon }}"></span>{% endif %}{% if navbar_brand_caption != "" %}{{ navbar_brand_caption }}{% endif %}</a>
+    {% if navbar_brand_image != "" %}<a href="{{ '/' | relative_url }}"><img src="{{ navbar_brand_image | relative_url }}" class="brand-image navbar-brand" alt="{{ navbar_brand_image_alt }}"></a>{% endif %}<a class="navbar-brand" href="{{ '/' | relative_url }}">{% if navbar_brand_icon != "" %}<span class="glyphicon {{ navbar_brand_icon }}"></span>{% endif %}{% if navbar_brand_caption != "" %}<span class="brand-caption">{{ navbar_brand_caption }}</span>{% endif %}</a>
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

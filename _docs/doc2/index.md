@@ -2,7 +2,7 @@
 layout: document
 title: "doc 2"
 previous_section: doc1
-next_section: doc2-1
+next_section: doc2/doc1
 upper_section: index
 ---
 
