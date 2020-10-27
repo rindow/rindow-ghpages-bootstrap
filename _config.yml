@@ -98,8 +98,9 @@ collections:
       primary:
         widgets:
         - { widget: search, caption: "Search" }
-        - { widget: free-area, name: menu, markdownify: true, realm: docs }
-        - { widget: nav, name: toc, realm: docs, caption: "Contents" }
+        - { widget: navv, name: docs, item: menu, caption: "Menu", anchor:"menu" }
+        - { widget: free-area, name: docs, item: menu, markdownify: true }
+        - { widget: nav, name: docs, item: toc, caption: "Contents" }
   help:
     title: "Help"
     output: true
