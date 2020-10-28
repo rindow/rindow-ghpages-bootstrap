@@ -89,7 +89,7 @@ collections:
     #meta_description: "default meta tag description.Google does not recommend that all pages have the same description"
     #meta_keywors: "default meta tag keywors.Google does not recommend that all pages have the same description"
     output: true
-    #theme: docs
+    theme: docs
     comment: true
     share: true
     #lang: en
@@ -98,7 +98,7 @@ collections:
       primary:
         widgets:
         - { widget: search, caption: "Search" }
-        - { widget: navv, name: docs, item: menu, caption: "Menu", anchor:"menu" }
+        - { widget: navv, name: docs, item: menu, caption: "Menu", anchor: "menu" }
         - { widget: free-area, name: docs, item: menu, markdownify: true }
         - { widget: nav, name: docs, item: toc, caption: "Contents" }
   help:
