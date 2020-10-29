@@ -96,12 +96,14 @@ collections:
     #lang: en
     #navigator: disable
     sidearea:
+      top:
+        widgets:
+        - { widget: navb, name: docs, inline: true }
       primary:
         widgets:
         - { widget: search, caption: "Search" }
         - { widget: navv, name: docs, item: menu, caption: "Menu", anchor: "menu" }
         - { widget: free-area, name: docs, item: menu, markdownify: true }
-        - { widget: nav, name: docs, item: toc, caption: "Contents" }
   help:
     title: "Help"
     output: true
