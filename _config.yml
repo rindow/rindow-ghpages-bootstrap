@@ -83,6 +83,7 @@ footer:
 ### Document collections
 collections:
   docs:
+    #no_ext: true
     #permalink: "/:collection/:title:output_ext"
     title: "Documents"
     description: "some description"
