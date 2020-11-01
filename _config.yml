@@ -95,6 +95,7 @@ collections:
     share: true
     #lang: en
     #navigator: disable
+    #search_engine_id: 000_google_cse_id_000
     sidearea:
       top:
         widgets:
